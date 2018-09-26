@@ -1,3 +1,11 @@
 .row {
     padding: 1em;
 }
+
+p.card-text {
+    font-size: 0.8em;
+}
+
+h5.card-title {
+    font-size: 1em;
+}
