@@ -1,16 +1,19 @@
-.flex-column{
-    border: 2px solid #FFFFCC;
+ul.nav.nav-pills.flex-column {
+    border: 2px solid rgb(252, 252, 227);
     border-radius: 5%;
 }
 
 p {
     color: navy;
     font-size: 0.9em;
+
+
 }
 
 h2 {
     color: navy;
 }
+
 ul {
-    background-color: #FFFFCC;
+    background-color: rgb(247, 247, 166);
 }
