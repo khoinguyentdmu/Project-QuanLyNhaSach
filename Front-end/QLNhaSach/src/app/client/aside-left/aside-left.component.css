@@ -1,12 +1,16 @@
 .flex-column{
-    border: 2px solid #005BFF;
-    border-radius: 3%;
+    border: 2px solid #FFFFCC;
+    border-radius: 5%;
 }
 
 p {
     color: navy;
+    font-size: 0.9em;
 }
 
 h2 {
     color: navy;
+}
+ul {
+    background-color: #FFFFCC;
 }
