@@ -10,6 +10,7 @@ import { AsideLeftComponent } from './client/aside-left/aside-left.component';
 import { MainContentComponent } from './client/main-content/main-content.component';
 import { ProductSliderComponent } from './client/product-slider/product-slider.component';
 import { BannerSliderComponent } from './client/banner-slider/banner-slider.component';
+import { PaginationComponent } from './client/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BannerSliderComponent } from './client/banner-slider/banner-slider.comp
     AsideLeftComponent,
     MainContentComponent,
     ProductSliderComponent,
-    BannerSliderComponent
+    BannerSliderComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule
