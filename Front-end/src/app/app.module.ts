@@ -10,6 +10,10 @@ import { AsideLeftComponent } from './client/aside-left/aside-left.component';
 import { ProductSliderComponent } from './client/product-slider/product-slider.component';
 import { BannerSliderComponent } from './client/banner-slider/banner-slider.component';
 import { PaginationComponent } from './client/pagination/pagination.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ClientComponent } from './client/client.component';
+import { MainContentComponent } from './client/main-content/main-content.component';
+import { InfoBookComponent } from './client/info-book/info-book.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,14 @@ import { PaginationComponent } from './client/pagination/pagination.component';
     AsideLeftComponent,
     ProductSliderComponent,
     BannerSliderComponent,
-    PaginationComponent
+    PaginationComponent,
+    ClientComponent,
+    MainContentComponent,
+    InfoBookComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
