@@ -7,7 +7,6 @@ import { ContainerComponent } from './client/container/container.component';
 import { FooterComponent } from './client/footer/footer.component';
 import { MainNavComponent } from './client/main-nav/main-nav.component';
 import { AsideLeftComponent } from './client/aside-left/aside-left.component';
-import { MainContentComponent } from './client/main-content/main-content.component';
 import { ProductSliderComponent } from './client/product-slider/product-slider.component';
 import { BannerSliderComponent } from './client/banner-slider/banner-slider.component';
 import { PaginationComponent } from './client/pagination/pagination.component';
@@ -20,7 +19,6 @@ import { PaginationComponent } from './client/pagination/pagination.component';
     FooterComponent,
     MainNavComponent,
     AsideLeftComponent,
-    MainContentComponent,
     ProductSliderComponent,
     BannerSliderComponent,
     PaginationComponent
