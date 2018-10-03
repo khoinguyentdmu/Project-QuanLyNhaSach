@@ -18,6 +18,13 @@ export class ProductSliderComponent implements OnInit {
   }
 
   public getBooks(): void {
-    this.books = this.bookApiService.getBooks();
+    this.bookApiService.getBooks().subscribe(data => {
+      let temp = JSON.parse(JSON.stringify(data));
+
+      for (let i=0; i<temp.length; i++)
+      {
+        this.books.push(new BookModel(temp[i]._id, temp[i].name, temp[i].price));
+      }
+    });
   }
 }

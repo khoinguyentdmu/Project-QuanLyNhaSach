@@ -6,7 +6,7 @@ import { InfoBookComponent } from './client/component/info-book/info-book.compon
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: MainContentComponent },
-  { path: 'infoBook', component: InfoBookComponent }
+  { path: 'infoBook/:id', component: InfoBookComponent }
 ];
 
 @NgModule({

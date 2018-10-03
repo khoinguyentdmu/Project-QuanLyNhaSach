@@ -1,4 +1,4 @@
-<div style="margin-top:1em;border-radius: 10px;padding-left: 0.8em;padding-right:0.8em;">
+<div style="margin-top:1em;border-radius: 10px;padding-left: 0.8em;padding-right:0.8em;" *ngIf="book">
   <div class="row">
     <div class="col-sm-3">
       <img src="../../../assets/images/harry-potter-va-hon-da-phu-thuy-tb-lan-24.450x652.w.b.jpg" class="img-thumbnail"
@@ -6,12 +6,12 @@
     </div>
     <div class="col-sm-9" style="border:0px solid gray">
       <!-- info cho book -->
-      <h3>Harry Potter và hòn đá phù thủy</h3>
+      <h3>{{ book.name }}</h3>
       <h4 style="color:#32373b">Tác Giả <a href="#"> J.K.Rowling </a></h4>
       <!-- the hien gia ca va bao nhieu cuon -->
       <h5 class="title-price"><small>Giá</small></h5>
       <p>
-        <span style="font-size: 2em;font-weight: bold; color: rgb(187, 47, 47)">150.000 VND </span>
+        <span style="font-size: 2em;font-weight: bold; color: rgb(187, 47, 47)">{{ book.price }} VND </span>
       </p>
       <div class="section" style="padding-bottom:20px;">
         <h6 class="title"><small>Số lượng</small></h6>
