@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ClientComponent } from './client/component/client.component';
 import { MainContentComponent } from './client/component/main-content/main-content.component';
 import { InfoBookComponent } from './client/component/info-book/info-book.component';
+import { ReviewBookComponent } from './client/component/review-book/review-book.component';
+import { CommentForBookComponent } from './client/component/comment-for-book/comment-for-book.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { InfoBookComponent } from './client/component/info-book/info-book.compon
     PaginationComponent,
     ClientComponent,
     MainContentComponent,
-    InfoBookComponent
+    InfoBookComponent,
+    ReviewBookComponent,
+    CommentForBookComponent
   ],
   imports: [
     BrowserModule,
