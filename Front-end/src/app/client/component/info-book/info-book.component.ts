@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoBookComponent implements OnInit {
 
+  kt =false;
+
   constructor() { }
 
   ngOnInit() {
   }
-
+  change() {
+    this.kt = !this.kt;
+  };
 }

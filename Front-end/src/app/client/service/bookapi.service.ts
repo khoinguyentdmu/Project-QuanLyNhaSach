@@ -16,12 +16,12 @@ export class BookApiService {
 
     this.httpClient.get(this.API_URL + '/book')
     .subscribe(res => {
-      console.log(JSON.stringify(res));
       let temp = JSON.parse(JSON.stringify(res));
   
       for (let i = 0; i < temp.length; i++) {
         books.push(new BookModel(temp[i]._id, temp[i].name, temp[i].price));
       }
     });
+    return books;
   } 
 }
