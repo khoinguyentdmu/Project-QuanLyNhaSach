@@ -12,24 +12,22 @@ exports.book_create = function (req, res) {
         if (err) {
             return next(err);
         }
-        res.send('book Created successfully')
+        res.json('book Created successfully')
     })
 };
 
 exports.book_details = function (req, res) {
     Book.findById(req.params.id, function (err, book) {
         if (err) return next(err);
-        res.send(book);
+        res.json(book);
     })
 };
 
-exports.books_details = function (res) {
-    Book.find(function (err, books) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(books);
-        }
+exports.books_details = function (req, res) {
+    res.setHeader('Content-Type', 'application/json');
+    Book.find({}, function (err, books) {
+        if (err) return next(err);
+        res.send(JSON.stringify(books));
     })
 };
 

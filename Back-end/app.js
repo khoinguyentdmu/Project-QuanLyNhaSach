@@ -8,7 +8,7 @@ var app = express();
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://root:binhduong@127.0.0.1/QLNhaSach';
+var mongoDB = 'mongodb://127.0.0.1/QLNhaSach';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
