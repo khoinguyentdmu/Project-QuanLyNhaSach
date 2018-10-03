@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { BookModel } from '../../model/book-model';
+import { BookApiService } from '../../service/bookapi.service';
 
 @Component({
   selector: 'app-product-slider',
@@ -11,21 +11,13 @@ export class ProductSliderComponent implements OnInit {
 
   books : Array<BookModel> = [];
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private bookApiService: BookApiService) { }
 
   ngOnInit() {
     this.getBooks();
   }
 
   public getBooks(): void {
-    this.httpClient.get('http://localhost:1234/book')
-      .subscribe(res => {
-        console.log(JSON.stringify(res));
-        let temp = JSON.parse(JSON.stringify(res));
-    
-        for (let i = 0; i < temp.length; i++) {
-          this.books.push(new BookModel(temp[i]._id, temp[i].name, temp[i].price));
-        }
-      });
+    this.books = this.bookApiService.getBooks();
   }
 }

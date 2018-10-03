@@ -11,7 +11,7 @@ export class BookApiService {
 
   constructor(private httpClient: HttpClient) { }
   
-  getBooks(){
+  getBooks() : Array<BookModel> {
     let books: Array<BookModel> = [];
 
     this.httpClient.get(this.API_URL + '/book')
@@ -23,5 +23,7 @@ export class BookApiService {
         books.push(new BookModel(temp[i]._id, temp[i].name, temp[i].price));
       }
     });
+
+    return books;
   } 
 }
