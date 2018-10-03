@@ -17,21 +17,31 @@ exports.book_create = function (req, res) {
 };
 
 exports.book_details = function (req, res) {
-    book.findById(req.params.id, function (err, book) {
+    Book.findById(req.params.id, function (err, book) {
         if (err) return next(err);
         res.send(book);
     })
 };
 
+exports.books_details = function (res) {
+    Book.find(function (err, books) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(books);
+        }
+    })
+};
+
 exports.book_update = function (req, res) {
-    book.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, book) {
+    Book.findByIdAndUpdate(req.params.id, {$set: req.body}, function (err, book) {
         if (err) return next(err);
         res.send('book udpated.');
     });
 };
 
 exports.book_delete = function (req, res) {
-    book.findByIdAndRemove(req.params.id, function (err) {
+    Book.findByIdAndRemove(req.params.id, function (err) {
         if (err) return next(err);
         res.send('Deleted successfully!');
     })

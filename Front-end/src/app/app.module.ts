@@ -1,19 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './client/header/header.component';
-import { ContainerComponent } from './client/container/container.component';
-import { FooterComponent } from './client/footer/footer.component';
-import { MainNavComponent } from './client/main-nav/main-nav.component';
-import { AsideLeftComponent } from './client/aside-left/aside-left.component';
-import { ProductSliderComponent } from './client/product-slider/product-slider.component';
-import { BannerSliderComponent } from './client/banner-slider/banner-slider.component';
-import { PaginationComponent } from './client/pagination/pagination.component';
+import { HeaderComponent } from './client/component/header/header.component';
+import { ContainerComponent } from './client/component/container/container.component';
+import { FooterComponent } from './client/component/footer/footer.component';
+import { MainNavComponent } from './client/component/main-nav/main-nav.component';
+import { AsideLeftComponent } from './client/component/aside-left/aside-left.component';
+import { ProductSliderComponent } from './client/component/product-slider/product-slider.component';
+import { BannerSliderComponent } from './client/component/banner-slider/banner-slider.component';
+import { PaginationComponent } from './client/component/pagination/pagination.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ClientComponent } from './client/client.component';
-import { MainContentComponent } from './client/main-content/main-content.component';
-import { InfoBookComponent } from './client/info-book/info-book.component';
+import { ClientComponent } from './client/component/client.component';
+import { MainContentComponent } from './client/component/main-content/main-content.component';
+import { InfoBookComponent } from './client/component/info-book/info-book.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { InfoBookComponent } from './client/info-book/info-book.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
