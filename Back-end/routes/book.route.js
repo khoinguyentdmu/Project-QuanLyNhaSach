@@ -34,7 +34,8 @@ var router = express.Router();
 // Require the controllers
 var book_controller = require('../controllers/book.controller');
 
-router.post('', image.single('bookImage'), book_controller.book_create);
+//router.post('', image.single('bookImage'), book_controller.book_create);
+router.post('', book_controller.book_create);
 router.get('/:id', book_controller.book_details);
 router.get('', book_controller.books_details);
 router.put('/:id', book_controller.book_update);

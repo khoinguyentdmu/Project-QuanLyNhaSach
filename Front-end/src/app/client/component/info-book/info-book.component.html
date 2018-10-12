@@ -1,13 +1,18 @@
 <div style="margin-top:1em;border-radius: 10px;padding-left: 0.8em;padding-right:0.8em;" *ngIf="book">
   <div class="row">
     <div class="col-sm-3">
-      <img src="../../../assets/images/harry-potter-va-hon-da-phu-thuy-tb-lan-24.450x652.w.b.jpg" class="img-thumbnail"
+      <img src="http://127.0.0.1:5000/image/{{book.bookImage}}" class="img-thumbnail"
         alt="Cinque Terre">
     </div>
     <div class="col-sm-9" style="border:0px solid gray">
       <!-- info cho book -->
       <h3>{{ book.name }}</h3>
-      <h4 style="color:#32373b">Tác Giả <a href="#"> J.K.Rowling </a></h4>
+      <h4 style="color:#32373b">Tác Giả: <span>{{book.author}}</span></h4>
+      <h5 class="title-price"><small>Số trang: </small><span>{{ book.format }}</span></h5>
+      <h5 class="title-price"><small>Kích thước: </small><span>{{ book.dimensions }}</span></h5>
+      <h5 class="title-price"><small>Nhà xuất bảng: </small><span>{{ book.publisher }}</span></h5>
+      <h5 class="title-price"><small>Năm xuất bản: </small><span>{{ book.publicationDate }}</span></h5>
+      <h5 class="title-price"><small>Ngôn ngữ: </small><span>{{ book.language }}</span></h5>
       <!-- the hien gia ca va bao nhieu cuon -->
       <h5 class="title-price"><small>Giá</small></h5>
       <p>

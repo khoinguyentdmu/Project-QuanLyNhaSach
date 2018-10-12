@@ -2,7 +2,6 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-
 var book = require('./routes/book.route'); // Imports routes for the books
 var app = express();
 

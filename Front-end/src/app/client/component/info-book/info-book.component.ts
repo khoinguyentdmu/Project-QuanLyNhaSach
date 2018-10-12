@@ -28,7 +28,20 @@ export class InfoBookComponent implements OnInit {
     let id = this.route.snapshot.paramMap.get('id');
     this.bookApiService.getBook(id).subscribe(data => {
       let temp = JSON.parse(JSON.stringify(data));
-      this.book = new BookModel(temp._id, temp.name, temp.price);
+      console.log(temp);
+      this.book = new BookModel(
+        temp.book._id,
+        temp.book.name,
+        temp.book.price,
+        temp.book.bookImage,
+        temp.book.description,
+        temp.book.format,
+        temp.book.author,
+        temp.book.dimensions,
+        temp.book.publisher,
+        temp.book.publicationDate,
+        temp.book.language
+      );
     });
   }
 
