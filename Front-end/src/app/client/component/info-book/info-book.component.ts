@@ -13,14 +13,22 @@ export class InfoBookComponent implements OnInit {
   book: BookModel;
   kt = false;
 
+  //Số lượng sách mua
+  numberOfBook: number;
+
   constructor(
     private bookApiService: BookApiService,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.initVariable();
     //Lấy thông tin sách
     this.getBook();
+  }
+
+  public initVariable(): void{
+    this.numberOfBook = 1;
   }
 
   //Lấy thông tin sách dựa vào id
@@ -48,5 +56,21 @@ export class InfoBookComponent implements OnInit {
   //Ẩn hiện chi tiết mô tả sách và bình luận sách
   change(): void {
     this.kt = !this.kt;
+  }
+
+  //Thay đổi số lượng sách mua 
+  public changeNumberOfBook(choose: boolean): void {
+    if (choose)
+      this.numberOfBook++;
+    else
+      this.numberOfBook--;
+
+    this.numberOfBook = Math.max(1, this.numberOfBook);
+    this.numberOfBook = Math.min(10, this.numberOfBook);
+  }
+
+  //Thêm vào giỏ hàng
+  public addToCart(): void {
+    alert('Đã thêm vào giỏ hàng!');
   }
 }

@@ -6,26 +6,6 @@
     width: 30%;
 }
 
-.btn-minus {
-    cursor: pointer;
-    font-size: 10px;
-    display: flex;
-    padding: 13px;
-    padding-left: 25px;
-    padding-right: 10px;
-    border: 0.8px solid gray;
-}
-
-.btn-plus {
-    cursor:pointer;
-    font-size:10px;
-    display:flex;
-    padding:13px;
-    padding-left:25px;
-    padding-right:10px;
-    border:0.8px solid gray;
-}
-
 div.section > div {
     width: 100%;
     display: inline-flex;

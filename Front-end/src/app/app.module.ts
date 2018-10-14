@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './client/component/header/header.component';
@@ -17,6 +18,7 @@ import { MainContentComponent } from './client/component/main-content/main-conte
 import { InfoBookComponent } from './client/component/info-book/info-book.component';
 import { ReviewBookComponent } from './client/component/review-book/review-book.component';
 import { CommentForBookComponent } from './client/component/comment-for-book/comment-for-book.component';
+import { CartComponent } from './client/component/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,14 @@ import { CommentForBookComponent } from './client/component/comment-for-book/com
     MainContentComponent,
     InfoBookComponent,
     ReviewBookComponent,
-    CommentForBookComponent
+    CommentForBookComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

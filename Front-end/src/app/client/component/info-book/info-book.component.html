@@ -21,15 +21,17 @@
       <div class="section" style="padding-bottom:20px;">
         <h6 class="title"><small>Số lượng</small></h6>
         <div>
-          <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
-          <input value="1" />
-          <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+          <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(false)">-</button>
+          <input [(ngModel)]="numberOfBook" />
+          <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(true)">+</button>
         </div>
       </div>
+      
+      
 
       <!-- nút mua hàng -->
       <div class="section" style="padding-bottom:50px;">
-        <button class="btn btn-success"><span style="margin-right:center" class="glyphicon glyphicon-shopping-cart"
+        <button class="btn btn-success" (click)="addToCart()"><span style="margin-right:center" class="glyphicon glyphicon-shopping-cart"
             aria-hidden="true"></span>Thêm vào giỏ hàng</button>
         <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span></a></h6>
       </div>
