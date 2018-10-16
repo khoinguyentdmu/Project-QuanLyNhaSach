@@ -3,6 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var book = require('./routes/book.route'); // Imports routes for the books
+var admin = require('./routes/admin.route'); //Imports routes for the admin
 var app = express();
 
 // Set up mongoose connection
@@ -29,6 +30,7 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/book', book);
+app.use('/admin', admin);
 
 var port = 1234;
 
