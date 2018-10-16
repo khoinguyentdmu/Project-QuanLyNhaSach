@@ -1,48 +1,54 @@
-<div style="margin-top:1em;border-radius: 10px;padding-left: 0.8em;padding-right:0.8em;" *ngIf="book">
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="http://127.0.0.1:5000/image/{{book.bookImage}}" class="img-thumbnail"
-        alt="Cinque Terre">
-    </div>
-    <div class="col-sm-9" style="border:0px solid gray">
-      <!-- info cho book -->
-      <h3>{{ book.name }}</h3>
-      <h4 style="color:#32373b">Tác Giả: <span>{{book.author}}</span></h4>
-      <h5 class="title-price"><small>Số trang: </small><span>{{ book.format }}</span></h5>
-      <h5 class="title-price"><small>Kích thước: </small><span>{{ book.dimensions }}</span></h5>
-      <h5 class="title-price"><small>Nhà xuất bảng: </small><span>{{ book.publisher }}</span></h5>
-      <h5 class="title-price"><small>Năm xuất bản: </small><span>{{ book.publicationDate }}</span></h5>
-      <h5 class="title-price"><small>Ngôn ngữ: </small><span>{{ book.language }}</span></h5>
-      <!-- the hien gia ca va bao nhieu cuon -->
-      <h5 class="title-price"><small>Giá</small></h5>
-      <p>
-        <span style="font-size: 2em;font-weight: bold; color: rgb(187, 47, 47)">{{ book.price }} VND </span>
-      </p>
-      <div class="section" style="padding-bottom:20px;">
-        <h6 class="title"><small>Số lượng</small></h6>
-        <div>
-          <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(false)">-</button>
-          <input [(ngModel)]="numberOfBook" />
-          <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(true)">+</button>
+<div class="row">
+  <div class="col-sm-3">
+    <app-aside-left></app-aside-left>
+  </div>
+  <div class="col-sm-9">
+    <div style="margin-top:1em;border-radius: 10px;padding-left: 0.8em;padding-right:0.8em;" *ngIf="book">
+      <div class="row">
+        <div class="col-sm-3">
+          <img src="http://127.0.0.1:5000/image/{{book.bookImage}}" class="img-thumbnail" alt="Cinque Terre">
         </div>
-      </div>
-      
-      
+        <div class="col-sm-9" style="border:0px solid gray">
+          <!-- info cho book -->
+          <h3>{{ book.name }}</h3>
+          <h4 style="color:#32373b">Tác Giả: <span>{{book.author}}</span></h4>
+          <h5 class="title-price"><small>Số trang: </small><span>{{ book.format }}</span></h5>
+          <h5 class="title-price"><small>Kích thước: </small><span>{{ book.dimensions }}</span></h5>
+          <h5 class="title-price"><small>Nhà xuất bảng: </small><span>{{ book.publisher }}</span></h5>
+          <h5 class="title-price"><small>Năm xuất bản: </small><span>{{ book.publicationDate }}</span></h5>
+          <h5 class="title-price"><small>Ngôn ngữ: </small><span>{{ book.language }}</span></h5>
+          <!-- the hien gia ca va bao nhieu cuon -->
+          <h5 class="title-price"><small>Giá</small></h5>
+          <p>
+            <span style="font-size: 2em;font-weight: bold; color: rgb(187, 47, 47)">{{ book.price }} VND </span>
+          </p>
+          <div class="section" style="padding-bottom:20px;">
+            <h6 class="title"><small>Số lượng</small></h6>
+            <div>
+              <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(false)">-</button>
+              <input [(ngModel)]="numberOfBook" />
+              <button class="btn btn-info" type="submit" style="width:2.5em;height:2.5em;" (click)="changeNumberOfBook(true)">+</button>
+            </div>
+          </div>
 
-      <!-- nút mua hàng -->
-      <div class="section" style="padding-bottom:50px;">
-        <button class="btn btn-success" (click)="addToCart()"><span style="margin-right:center" class="glyphicon glyphicon-shopping-cart"
-            aria-hidden="true"></span>Thêm vào giỏ hàng</button>
-        <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span></a></h6>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <ul class="menu-items">
-          <li><a (click)="change()">Chi tiết sản phẩm</a></li>
-          <li><a (click)="change()">Đánh giá sách</a></li>
-        </ul>
-        <app-review-book *ngIf="!kt"></app-review-book>
-        <app-comment-for-book *ngIf="kt"></app-comment-for-book>
+
+
+          <!-- nút mua hàng -->
+          <div class="section" style="padding-bottom:50px;">
+            <button class="btn btn-success" (click)="addToCart()"><span style="margin-right:center" class="glyphicon glyphicon-shopping-cart"
+                aria-hidden="true"></span>Thêm vào giỏ hàng</button>
+            <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span></a></h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <ul class="menu-items">
+              <li><a (click)="change()">Chi tiết sản phẩm</a></li>
+              <li><a (click)="change()">Đánh giá sách</a></li>
+            </ul>
+            <app-review-book *ngIf="!kt"></app-review-book>
+            <app-comment-for-book *ngIf="kt"></app-comment-for-book>
+          </div>
+        </div>
       </div>
     </div>
