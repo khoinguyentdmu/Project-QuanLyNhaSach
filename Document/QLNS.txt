@@ -1,0 +1,24 @@
+# Project-QuanLyNhaSach
+
+API
+1. L?y thông tin t?t c? sách
+Method: GET
+URL: http://localhost:1234/book
+
+2. T?o thông tin sách
+Method: POST
+URL: http://localhost:1234/book
+Require: name, price, bookImage
+
+3. L?y thông tin sách theo id
+Method: GET
+URL: http://localhost:1234/book/:id
+
+4. C?p nh?t thông tin sách theo id
+Method: PUT
+URL: http://localhost:1234/book/:id
+Require: name, price, bookImage
+
+5. Xóa sách theo id
+Method: DELETE
+URL: http://localhost:1234/book/:id
