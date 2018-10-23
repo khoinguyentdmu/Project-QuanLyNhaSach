@@ -4,6 +4,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var book = require('./routes/book.route'); // Imports routes for the books
 var admin = require('./routes/admin.route'); //Imports routes for the admin
+var util = require('./routes/util.route'); //Imports routes for the util
 var app = express();
 
 // Set up mongoose connection
@@ -31,6 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/book', book);
 app.use('/admin', admin);
+app.use('/util', util);
 
 var port = 1234;
 

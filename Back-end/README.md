@@ -40,3 +40,24 @@ Ví dụ request: http://localhost:1234/book/5bc063fe11672928fcf9c12e
 Method: DELETE
 URL: http://localhost:1234/book/:id
 Ví dụ request: http://localhost:1234/book/5bc063fe11672928fcf9c12e
+
+6. Tạo tài khoản admin
+Method: POST
+URL: http://localhost:1234/admin/signup
+Require: username, password
+Ví dụ request: http://localhost:1234/admin/signup
+	{
+		"username":"admin",
+		"password":"admin"
+	}
+	
+7. Đăng nhập tài khoản admin
+Method: POST
+URL: http://localhost:1234/admin/login
+Require: username, password
+Ví dụ request: http://localhost:1234/admin/login
+	{
+		"username":"admin",
+		"password":"admin"
+	}
+	

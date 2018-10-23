@@ -1,43 +1,38 @@
-<div class="row">
-  <div class="col-sm-3">
-    <app-aside-left></app-aside-left>
-  </div>
-  <div class="col-sm-9" style="margin-top:1em;">
-    <h4>Nhập mã đơn hàng để kiểm tra tình trạng đơn hàng</h4>
-    <br>
-    <div class="form-group row has-success">
-      <label class="col-sm-2 col-form-label">Mã đơn hàng</label>
-      <div class="col-sm-6">
-        <input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="Nhập mã đơn hàng vào đây">
-        <small class="form-text text-muted">Bạn sẽ tìm thấy mã đơn hàng trong email của bạn</small>
-      </div>
-      <div class="col-sm-4">
-        <button type="button" class="btn btn-primary">Kiểm tra</button>
-      </div>
+<div style="margin-top:1em;">
+  <h4>Nhập mã đơn hàng để kiểm tra tình trạng đơn hàng</h4>
+  <br>
+  <div class="form-group row has-success">
+    <label class="col-sm-2 col-form-label">Mã đơn hàng</label>
+    <div class="col-sm-6">
+      <input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="Nhập mã đơn hàng vào đây">
+      <small class="form-text text-muted">Bạn sẽ tìm thấy mã đơn hàng trong email của bạn</small>
     </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary">Kiểm tra</button>
+    </div>
+  </div>
 
-    <br>
-    <br>
-    <div class="card">
-        <h5 class="card-header">Tình trạng</h5>
-        <div class="card-body">
-          <h5 class="card-title">Đơn hàng đang được giao...</h5>
-          <p class="card-text">Đơn hàng của bạn đang được các nhân viên giao hàng vận chuyển đến nơi của bạn</p>
-          <div class="progress">
-              <div class="progress-bar bg-danger" style="width:25%">
-                Đã nhận đơn hàng
-              </div>
-              <div class="progress-bar bg-warning" style="width:25%">
-                Đã đóng gói
-              </div>
-              <div class="progress-bar" style="width:25%">
-                Đang vận chuyển
-              </div>
-              <div class="progress-bar bg-success" style="width:25%">
-                Khách đã nhận
-              </div>
-            </div>
+  <br>
+  <br>
+  <div class="card">
+    <h5 class="card-header">Tình trạng</h5>
+    <div class="card-body">
+      <h5 class="card-title">Đơn hàng đang được giao...</h5>
+      <p class="card-text">Đơn hàng của bạn đang được các nhân viên giao hàng vận chuyển đến nơi của bạn</p>
+      <div class="progress">
+        <div class="progress-bar bg-danger" style="width:25%">
+          Đã nhận đơn hàng
+        </div>
+        <div class="progress-bar bg-warning" style="width:25%">
+          Đã đóng gói
+        </div>
+        <div class="progress-bar" style="width:25%">
+          Đang vận chuyển
+        </div>
+        <div class="progress-bar bg-success" style="width:25%">
+          Khách đã nhận
         </div>
       </div>
+    </div>
   </div>
 </div>

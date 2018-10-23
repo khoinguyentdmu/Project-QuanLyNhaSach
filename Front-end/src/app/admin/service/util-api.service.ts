@@ -1,23 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { BookModel } from '../model/book-model';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { LoginModel } from '../model/login-model';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
 })
-export class BookApiService {
+export class UtilApiService {
 
   API_URL = environment.apiUrl;
-  book: BookModel;
 
   constructor(private httpClient: HttpClient) { }
 
   private extractData(res: Response) {
     let body = res;
-    return body || { };
+    return body || {};
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -35,15 +38,25 @@ export class BookApiService {
     return throwError('Something bad happened; please try again later.');
   };
 
-  getBooks(): Observable<any> {
-    return this.httpClient.get(this.API_URL + '/book').pipe(
-      map(this.extractData),
-      catchError(this.handleError));
+  login(admin: LoginModel): Observable<any> {
+    return this.httpClient.post(this.API_URL + '/admin/login', admin, httpOptions)
+      .pipe(
+        map(this.extractData),
+        catchError(this.handleError)
+      );
   }
 
-  getBook(idBook: string): Observable<any> {
-    return this.httpClient.get(this.API_URL + '/book/' + idBook).pipe(
-      map(this.extractData),
-      catchError(this.handleError));
+  checkTheLoginStatusFromLocalStorage(value: string): Observable<any> {
+    
+    let token_Authorization: string = localStorage.getItem(value);
+    
+    if (token_Authorization == null)
+      token_Authorization = "";
+    
+    let httpOptions = {
+      headers: new HttpHeaders({'Authorization': token_Authorization})
+    };
+
+    return this.httpClient.post(this.API_URL + '/util/checkTheLoginStatus', null , httpOptions);
   }
 }

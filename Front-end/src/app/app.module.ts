@@ -22,8 +22,11 @@ import { CartComponent } from './client/component/cart/cart.component';
 import { LoginComponent } from './admin/component/login/login.component';
 import { TrackMyOrderComponent } from './client/component/track-my-order/track-my-order.component';
 import { AdminCrudComponent } from './admin/component/admin-crud/admin-crud.component';
-import { BookCategoryComponent } from './admin/component/book-category/book-category.component';
+import { ManageBookCategoryComponent } from './admin/component/manage-book-category/manage-book-category.component';
 import { OrderInfoComponent } from './client/component/order-info/order-info.component';
+import { AllBookComponent } from './client/component/all-book/all-book.component';
+import { ManageListComponent } from './admin/component/manage-list/manage-list.component';
+import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +48,11 @@ import { OrderInfoComponent } from './client/component/order-info/order-info.com
     LoginComponent,
     TrackMyOrderComponent,
     AdminCrudComponent,
-    BookCategoryComponent,
-    OrderInfoComponent
+    ManageBookCategoryComponent,
+    OrderInfoComponent,
+    AllBookComponent,
+    ManageListComponent,
+    ManageBookComponent
   ],
   imports: [
     BrowserModule,
