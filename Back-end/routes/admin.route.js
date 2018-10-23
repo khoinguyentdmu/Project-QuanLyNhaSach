@@ -71,7 +71,7 @@ router.post("/login", (req, res, next) => {
                         },
                         "secret",
                         {
-                            expiresIn: "1h"
+                            expiresIn: "15m"
                         }
                     );
                     return res.status(200).json({

@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'homepage', component: MainContentComponent,
     children: [
-      {path: '', redirectTo: 'all-book', pathMatch: 'full'},
+      {path: '', redirectTo: 'all-book/all', pathMatch: 'full'},
       {path: 'all-book/:id', component: AllBookComponent},
       {path: 'login', component: LoginComponent}
     ]
