@@ -5,6 +5,7 @@ exports.book_create = function (req, res, next) {
         {
             name: req.body.name,
             price: req.body.price,
+            bookCategory: req.body.bookCategory,
             description: req.body.description,
             format: req.body.format,
             author: req.body.author,
@@ -40,7 +41,7 @@ exports.book_create = function (req, res, next) {
 exports.book_details = function (req, res, next) {
     const id = req.params.id;
     Book.findById(id)
-        .select('_id name price description format author dimensions publisher publicationDate language bookImage')
+        .select('_id name price bookCategory description format author dimensions publisher publicationDate language bookImage')
         .exec()
         .then(doc => {
             console.log("From database", doc);
@@ -66,7 +67,7 @@ exports.book_details = function (req, res, next) {
 
 exports.books_details = function (req, res, next) {
     Book.find()
-        .select('_id name price description format author dimensions publisher publicationDate language bookImage')
+        .select('_id name price bookCategory description format author dimensions publisher publicationDate language bookImage')
         .exec()
         .then(docs => {
             const response = {

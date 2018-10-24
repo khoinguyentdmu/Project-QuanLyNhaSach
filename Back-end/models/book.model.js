@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 var BookSchema = new Schema({
     name: { type: String, required: true },
     price: { type: Number, required: true },
+    bookCategory: {type: String, required: true},
     bookImage: { type: String, required: true, default: 'default-book-image.png' },
     description: { type: String, required: true },
     format: { type: String, required: true },

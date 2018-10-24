@@ -27,6 +27,7 @@ export class ProductSliderComponent implements OnInit {
           temp[i].book._id,
           temp[i].book.name,
           temp[i].book.price,
+          temp[i].bookCategory,
           temp[i].book.bookImage,
           temp[i].book.description,
           temp[i].book.format,

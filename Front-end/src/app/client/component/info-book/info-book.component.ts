@@ -41,6 +41,7 @@ export class InfoBookComponent implements OnInit {
         temp.book._id,
         temp.book.name,
         temp.book.price,
+        temp.book.bookCategory,
         temp.book.bookImage,
         temp.book.description,
         temp.book.format,
