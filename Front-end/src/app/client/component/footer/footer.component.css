@@ -1,8 +1,9 @@
 #myFooter {
 	background-color:#243139;
-	color:white;
+	color:rgb(67, 87, 153);
 }
 
+/* dong cuoi cung copyright ji ji do */
 #myFooter .footer-copyright{
 	background-color:#262628;
 	padding-top:3px;
@@ -39,33 +40,10 @@
 	color:white;
 }
 
+/* dinh dang thong so Bat Dau, Ve chung toi, Chinh sach dueu khoan */
 #myFooter .myCols{
-	text-align: center;
+	text-align: left;
 }
-
-#myFooter .facebook:hover{
-	color:#0077e2;
-}
-
-#myFooter .google:hover{
-	color:#ef1a1a;
-}
-
-#myFooter .twitter:hover{
-	color: #00aced;
-}
-
-@media screen and (max-width: 767px){
-	#myFooter {
-		text-align: center;
-	}
-}
-
-
-
-/* CSS used for positioning the footers at the bottom of the page. */
-/* You can remove this. */
-
 
 html{
 	height: 100% !important;

@@ -29,6 +29,7 @@ import { ManageListComponent } from './admin/component/manage-list/manage-list.c
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
 import { ManageCommentComponent } from './admin/component/manage-comment/manage-comment.component';
 import { ManageOrderBookComponent } from './admin/component/manage-order-book/manage-order-book.component';
+import { ManagePostsComponent } from './admin/component/manage-posts/manage-posts.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ManageOrderBookComponent } from './admin/component/manage-order-book/ma
     ManageListComponent,
     ManageBookComponent,
     ManageCommentComponent,
-    ManageOrderBookComponent
+    ManageOrderBookComponent,
+    ManagePostsComponent
   ],
   imports: [
     BrowserModule,

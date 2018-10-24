@@ -12,6 +12,7 @@ import { ManageBookCategoryComponent } from './admin/component/manage-book-categ
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
 import { ManageCommentComponent } from './admin/component/manage-comment/manage-comment.component';
 import { ManageOrderBookComponent } from './admin/component/manage-order-book/manage-order-book.component';
+import { ManagePostsComponent } from './admin/component/manage-posts/manage-posts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
       {path: 'book-category', component: ManageBookCategoryComponent},
       {path: 'book', component: ManageBookComponent},
       {path: 'comment', component: ManageCommentComponent},
-      {path: 'order-book', component: ManageOrderBookComponent}
+      {path: 'order-book', component: ManageOrderBookComponent},
+      {path: 'posts', component: ManagePostsComponent}
     ]
   },
   { path: 'order-info', component: OrderInfoComponent}
