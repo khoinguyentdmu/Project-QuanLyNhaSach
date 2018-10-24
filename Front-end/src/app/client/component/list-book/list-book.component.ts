@@ -3,11 +3,11 @@ import { BookModel } from '../../model/book-model';
 import { BookApiService } from '../../service/bookapi.service';
 
 @Component({
-  selector: 'app-product-slider',
-  templateUrl: './product-slider.component.html',
-  styleUrls: ['./product-slider.component.css']
+  selector: 'app-list-book',
+  templateUrl: './list-book.component.html',
+  styleUrls: ['./list-book.component.css']
 })
-export class ProductSliderComponent implements OnInit {
+export class ListBookComponent implements OnInit {
 
   books: Array<BookModel> = [];
 

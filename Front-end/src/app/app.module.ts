@@ -8,13 +8,12 @@ import { HeaderComponent } from './client/component/header/header.component';
 import { ContainerComponent } from './client/component/container/container.component';
 import { FooterComponent } from './client/component/footer/footer.component';
 import { MainNavComponent } from './client/component/main-nav/main-nav.component';
-import { AsideLeftComponent } from './client/component/aside-left/aside-left.component';
-import { ProductSliderComponent } from './client/component/product-slider/product-slider.component';
+import { ListBookComponent } from './client/component/list-book/list-book.component';
 import { BannerSliderComponent } from './client/component/banner-slider/banner-slider.component';
 import { PaginationComponent } from './client/component/pagination/pagination.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ClientComponent } from './client/component/client.component';
-import { MainContentComponent } from './client/component/main-content/main-content.component';
+import { BookComponent } from './client/component/book/book.component';
 import { InfoBookComponent } from './client/component/info-book/info-book.component';
 import { ReviewBookComponent } from './client/component/review-book/review-book.component';
 import { CommentForBookComponent } from './client/component/comment-for-book/comment-for-book.component';
@@ -35,12 +34,11 @@ import { ManageBookComponent } from './admin/component/manage-book/manage-book.c
     ContainerComponent,
     FooterComponent,
     MainNavComponent,
-    AsideLeftComponent,
-    ProductSliderComponent,
+    ListBookComponent,
     BannerSliderComponent,
     PaginationComponent,
     ClientComponent,
-    MainContentComponent,
+    BookComponent,
     InfoBookComponent,
     ReviewBookComponent,
     CommentForBookComponent,
