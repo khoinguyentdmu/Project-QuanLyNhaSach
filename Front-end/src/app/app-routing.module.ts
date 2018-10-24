@@ -10,6 +10,8 @@ import { OrderInfoComponent } from './client/component/order-info/order-info.com
 import { AllBookComponent } from './client/component/all-book/all-book.component';
 import { ManageBookCategoryComponent } from './admin/component/manage-book-category/manage-book-category.component';
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
+import { ManageCommentComponent } from './admin/component/manage-comment/manage-comment.component';
+import { ManageOrderBookComponent } from './admin/component/manage-order-book/manage-order-book.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
@@ -28,7 +30,9 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: 'book-category', pathMatch: 'full'},
       {path: 'book-category', component: ManageBookCategoryComponent},
-      {path: 'book', component: ManageBookComponent}
+      {path: 'book', component: ManageBookComponent},
+      {path: 'comment', component: ManageCommentComponent},
+      {path: 'order-book', component: ManageOrderBookComponent}
     ]
   },
   { path: 'order-info', component: OrderInfoComponent}
