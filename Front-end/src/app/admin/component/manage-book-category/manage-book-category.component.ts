@@ -25,7 +25,7 @@ export class ManageBookCategoryComponent implements OnInit {
     });
   }
 
-  public getBookCategories(): void {
+  getBookCategories(): void {
     this.bookCategoryApiService.getBookCategories().subscribe(data => {
       let temp = JSON.parse(JSON.stringify(data)).bookCategories;
 
@@ -40,7 +40,7 @@ export class ManageBookCategoryComponent implements OnInit {
     console.log(this.bookCategories);
   }
 
-  public deleteBookCategory(id: string): void {
+  deleteBookCategory(id: string): void {
     this.bookCategoryApiService.deleteBookCategories(id)
     .subscribe(res => {
       this.getBookCategories();

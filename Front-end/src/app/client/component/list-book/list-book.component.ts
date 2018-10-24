@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BookModel } from '../../model/book-model';
 import { BookApiService } from '../../service/bookapi.service';
 
@@ -9,7 +9,7 @@ import { BookApiService } from '../../service/bookapi.service';
 })
 export class ListBookComponent implements OnInit {
 
-  books: Array<BookModel> = [];
+  @Input() books: Array<BookModel>;
 
   constructor(private bookApiService: BookApiService) { }
 
@@ -18,7 +18,7 @@ export class ListBookComponent implements OnInit {
   }
 
   public getBooks(): void {
-    this.bookApiService.getBooks().subscribe(data => {
+    /*this.bookApiService.getBooks().subscribe(data => {
       let temp = JSON.parse(JSON.stringify(data)).books;
 
       console.log(temp);
@@ -38,6 +38,6 @@ export class ListBookComponent implements OnInit {
           temp[i].book.language
         ));
       }
-    });
+    });*/
   }
 }

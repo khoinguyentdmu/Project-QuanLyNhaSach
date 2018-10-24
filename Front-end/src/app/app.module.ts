@@ -23,7 +23,6 @@ import { TrackMyOrderComponent } from './client/component/track-my-order/track-m
 import { AdminCrudComponent } from './admin/component/admin-crud/admin-crud.component';
 import { ManageBookCategoryComponent } from './admin/component/manage-book-category/manage-book-category.component';
 import { OrderInfoComponent } from './client/component/order-info/order-info.component';
-import { AllBookComponent } from './client/component/all-book/all-book.component';
 import { ManageListComponent } from './admin/component/manage-list/manage-list.component';
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
 
@@ -48,7 +47,6 @@ import { ManageBookComponent } from './admin/component/manage-book/manage-book.c
     AdminCrudComponent,
     ManageBookCategoryComponent,
     OrderInfoComponent,
-    AllBookComponent,
     ManageListComponent,
     ManageBookComponent
   ],
