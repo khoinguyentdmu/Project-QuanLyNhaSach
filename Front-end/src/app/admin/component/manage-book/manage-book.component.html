@@ -1,27 +1,14 @@
-<p class="h3">Quản lý Sách</p>
-<br>
-<div>
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Thể loại sách</label>
-    <div class="col-sm-5">
-      <input class="form-control" placeholder="Nhập thể loại sách" [(ngModel)]="bookCategory.name">
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-6">
-      <button class="btn btn-primary" (click)="postBookCategory()">Thêm mới</button>
-    </div>
-  </div>
-</div>
-
 <table class="table table-bordered">
   <thead>
-    <tr>
-      <th scope="col" style="width: 10%;">số sách</th>
-      <th scope="col" style="width: 70%;">Tên thể loại sách</th>
-      <th scope="col" style="width: 20%;"></th>
+    <tr class="text-center">
+      <th scope="col" style="width: 20%;">Tên sách</th>
+      <th scope="col" style="width: 20%;">Loại sách</th>
+      <th scope="col" style="width: 30%;">Nội dung cơ bản</th>
+      <th scope="col" style="width: 20%;">Tác giả</th>
+      <th scope="col" style="width: 10%;">Giá</th>
     </tr>
   </thead>
+
   <tbody>
     <tr *ngFor="let bookCategory of bookCategories">
       <td scope="row">{{ bookCategories.indexOf(bookCategory) + 1}}</td>
@@ -35,3 +22,7 @@
     </tr>
   </tbody>
 </table>
+<div>
+<button class="btn btn-primary" (click)="postBookCategory()">Thêm mới sách</button>
+<button class=" btn btn-danger " (click)="postBookCategory()">Xem chi tiết sản phẩm</button>
+</div>
