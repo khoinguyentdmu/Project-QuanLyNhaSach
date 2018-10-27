@@ -9,6 +9,9 @@ import { AdminCrudComponent } from './admin/component/admin-crud/admin-crud.comp
 import { OrderInfoComponent } from './client/component/order-info/order-info.component';
 import { ManageBookCategoryComponent } from './admin/component/manage-book-category/manage-book-category.component';
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
+import { ManageCommentComponent } from './admin/component/manage-comment/manage-comment.component';
+import { ManageOrderBookComponent } from './admin/component/manage-order-book/manage-order-book.component';
+import { ManagePostsComponent } from './admin/component/manage-posts/manage-posts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
@@ -25,7 +28,21 @@ const routes: Routes = [
       { path: 'book', component: ManageBookComponent }
     ]
   },
-  { path: 'order-info', component: OrderInfoComponent }
+  { path: 'infoBook/:id', component: InfoBookComponent },
+  { path: 'your-cart', component: CartComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'track-my-order', component: TrackMyOrderComponent},
+  { path: 'admin', component: AdminCrudComponent,
+    children: [
+      {path: '', redirectTo: 'book-category', pathMatch: 'full'},
+      {path: 'book-category', component: ManageBookCategoryComponent},
+      {path: 'book', component: ManageBookComponent},
+      {path: 'comment', component: ManageCommentComponent},
+      {path: 'order-book', component: ManageOrderBookComponent},
+      {path: 'posts', component: ManagePostsComponent}
+    ]
+  },
+  { path: 'order-info', component: OrderInfoComponent}
 ];
 
 @NgModule({

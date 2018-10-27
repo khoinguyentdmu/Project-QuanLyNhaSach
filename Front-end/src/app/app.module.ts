@@ -25,6 +25,9 @@ import { ManageBookCategoryComponent } from './admin/component/manage-book-categ
 import { OrderInfoComponent } from './client/component/order-info/order-info.component';
 import { ManageListComponent } from './admin/component/manage-list/manage-list.component';
 import { ManageBookComponent } from './admin/component/manage-book/manage-book.component';
+import { ManageCommentComponent } from './admin/component/manage-comment/manage-comment.component';
+import { ManageOrderBookComponent } from './admin/component/manage-order-book/manage-order-book.component';
+import { ManagePostsComponent } from './admin/component/manage-posts/manage-posts.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { ManageBookComponent } from './admin/component/manage-book/manage-book.c
     ManageBookCategoryComponent,
     OrderInfoComponent,
     ManageListComponent,
-    ManageBookComponent
+    ManageBookComponent,
+    ManageCommentComponent,
+    ManageOrderBookComponent,
+    ManagePostsComponent
   ],
   imports: [
     BrowserModule,

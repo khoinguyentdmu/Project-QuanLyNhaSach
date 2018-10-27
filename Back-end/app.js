@@ -36,6 +36,8 @@ app.use('/book', book);
 app.use('/admin', admin);
 app.use('/util', util);
 
+app.use('/image', express.static('assets/images'))
+
 var port = 1234;
 
 app.listen(port, () => {
