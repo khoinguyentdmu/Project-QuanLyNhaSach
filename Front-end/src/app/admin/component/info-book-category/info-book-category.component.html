@@ -1,0 +1,15 @@
+<h4 *ngIf="!isModify">Thêm thông tin loại sách</h4>
+<h4 *ngIf="isModify">Sửa thông tin loại sách</h4>
+<div class="form-group row">
+  <label for="inputEmail3" class="col-sm-2 col-form-label">Thể loại sách</label>
+  <div class="col-sm-5">
+    <input class="form-control" placeholder="Nhập thể loại sách" [(ngModel)]="bookCategory.name">
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-sm-12">
+    <button class="btn btn-primary" (click)="postBookCategory()" *ngIf="!isModify">Thêm mới</button>
+    <button class="btn btn-primary" (click)="putBookCategory()" *ngIf="isModify">Cập nhật</button>
+  </div>
+</div>

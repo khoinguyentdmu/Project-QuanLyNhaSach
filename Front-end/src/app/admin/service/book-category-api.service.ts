@@ -40,7 +40,7 @@ export class BookCategoryApiService {
 
   postBookCategory(bookCategory: BookCategoryModel): Observable<any> {
 
-    let token_Authorization: string = localStorage.getItem("Token-Authorization");
+    let token_Authorization: string = localStorage.getItem('Token-Authorization');
 
     let httpOptions = {
       headers: new HttpHeaders({ 'Authorization': token_Authorization })
@@ -49,15 +49,32 @@ export class BookCategoryApiService {
     return this.httpClient.post(this.API_URL + '/bookCategory', bookCategory, httpOptions);
   }
 
+  putBookCategory(bookCategory: BookCategoryModel): Observable<any> {
+
+    let token_Authorization: string = localStorage.getItem('Token-Authorization');
+
+    let httpOptions = {
+      headers: new HttpHeaders({ 'Authorization': token_Authorization })
+    };
+
+    return this.httpClient.put(this.API_URL + '/bookCategory/' + bookCategory._id, bookCategory, httpOptions);
+  }
+
   getBookCategories(): Observable<any> {
     return this.httpClient.get(this.API_URL + '/bookCategory').pipe(
       map(this.extractData),
       catchError(this.handleError));
   }
 
+  getBookCategory(id: string): Observable<any> {
+    return this.httpClient.get(this.API_URL + '/bookCategory/' + id).pipe(
+      map(this.extractData),
+      catchError(this.handleError));
+  }
+
   deleteBookCategories(id: string): Observable<any> {
     let token_Authorization: string = localStorage.getItem("Token-Authorization");
-    
+
     let httpOptions = {
       headers: new HttpHeaders({ 'Authorization': token_Authorization })
     };

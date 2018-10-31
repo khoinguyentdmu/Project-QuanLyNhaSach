@@ -9,20 +9,12 @@ import { BookCategoryApiService } from '../../service/book-category-api.service'
 })
 export class ManageBookCategoryComponent implements OnInit {
 
-  bookCategory: BookCategoryModel = new BookCategoryModel('', '');
   bookCategories: Array<BookCategoryModel> = [];
 
   constructor(private bookCategoryApiService: BookCategoryApiService) { }
 
   ngOnInit() {
     this.getBookCategories();
-  }
-
-  postBookCategory(): void {
-    this.bookCategoryApiService.postBookCategory(this.bookCategory).subscribe(res => {
-      alert('Thêm thành công');
-      this.getBookCategories();
-    });
   }
 
   getBookCategories(): void {
@@ -41,15 +33,13 @@ export class ManageBookCategoryComponent implements OnInit {
   }
 
   deleteBookCategory(id: string): void {
-    this.bookCategoryApiService.deleteBookCategories(id)
-    .subscribe(res => {
-      this.getBookCategories();
-    }, (err) => {
-      alert("Xóa thất bại");
-    });
-  }
-
-  public putBookCategory(id: string): void {
-    alert(id);
+    if (confirm('Bạn có chắc chắn')) {
+      this.bookCategoryApiService.deleteBookCategories(id)
+        .subscribe(res => {
+          this.getBookCategories();
+        }, (err) => {
+          alert("Xóa thất bại");
+        });
+    }
   }
 }
