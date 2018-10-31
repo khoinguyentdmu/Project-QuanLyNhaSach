@@ -15,3 +15,27 @@ h3 {
 ul {
     background-color: rgb(247, 247, 166);
 }
+
+.item-book-category {
+    background-color: #F7F7A6; 
+    color: black; 
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: left;
+}
+
+.item-book-category:hover {
+    background-color: #FCF27B;
+    color: #4A36F7;
+    font-weight: bold;
+}
+
+.item-book-category:focus {
+    background-color: #FCF27B;
+    color: red;
+    font-weight: bold;
+}

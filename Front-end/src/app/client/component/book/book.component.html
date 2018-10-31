@@ -6,10 +6,10 @@
         </div>
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
-                <a class="nav-link active">Tất cả sách</a>
+                <button class="item-book-category" (click)="getBooks('')">Tất cả sách</button>
             </li>
             <li class="nav-item" *ngFor="let bookCategory of bookCategories">
-                <a class="nav-link" href="#">{{ bookCategory.name }}</a>
+                <button class="item-book-category" (click)="getBooks(bookCategory.name)">{{ bookCategory.name }}</button>
             </li>
         </ul>
         <hr class="d-sm-none">

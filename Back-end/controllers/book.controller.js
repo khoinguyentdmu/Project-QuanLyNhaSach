@@ -66,7 +66,18 @@ exports.book_details = function (req, res, next) {
 };
 
 exports.books_details = function (req, res, next) {
-    Book.find()
+    
+    var filter = {};
+
+    //Filter
+    var qName = req.query.bookCategory;
+    if (qName){
+        filter.bookCategory = qName;
+    }
+
+    //console.log(filter);
+
+    Book.find(filter)
         .select('_id name price bookCategory description format author dimensions publisher publicationDate language bookImage')
         .exec()
         .then(docs => {

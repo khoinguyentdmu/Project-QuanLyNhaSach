@@ -18,14 +18,16 @@ export class BookComponent implements OnInit {
     private bookCategoryApiService: BookCategoryApiService) { }
 
   ngOnInit() {
-    this.getBooks();
+    this.getBooks('');
     this.getBookCategories();
   }
 
-  getBooks(): void {
+  getBooks(filter: string): void {
     this.books = [];
 
-    this.bookApiService.getBooks().subscribe(data => {
+    console.log(filter);
+
+    this.bookApiService.getBooks(filter).subscribe(data => {
       let temp = JSON.parse(JSON.stringify(data)).books;
 
       //console.log(temp);
@@ -34,7 +36,7 @@ export class BookComponent implements OnInit {
           temp[i].book._id,
           temp[i].book.name,
           temp[i].book.price,
-          temp[i].bookCategory,
+          temp[i].book.bookCategory,
           temp[i].book.bookImage,
           temp[i].book.description,
           temp[i].book.format,

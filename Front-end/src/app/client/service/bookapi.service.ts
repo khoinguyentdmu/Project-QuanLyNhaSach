@@ -35,8 +35,14 @@ export class BookApiService {
     return throwError('Something bad happened; please try again later.');
   };
 
-  getBooks(): Observable<any> {
-    return this.httpClient.get(this.API_URL + '/book').pipe(
+  getBooks(filterBookCategory: string): Observable<any> {
+
+    let filter = '';
+    if (filterBookCategory.length>0){
+      filter += '?bookCategory=' + filterBookCategory;
+    }
+
+    return this.httpClient.get(this.API_URL + '/book' + filter).pipe(
       map(this.extractData),
       catchError(this.handleError));
   }

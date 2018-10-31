@@ -15,6 +15,7 @@ export class ListBookComponent implements OnInit {
 
   ngOnInit() {
     this.getBooks();
+    console.log(this.books);
   }
 
   public getBooks(): void {

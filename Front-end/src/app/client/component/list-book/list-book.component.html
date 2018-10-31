@@ -2,10 +2,11 @@
   <div class="align-items-center col-sm-3" *ngFor="let book of books" style="margin-bottom: 1em;">
     <div class="card">
       <img class="card-img-top" src="http://127.0.0.1:1234/image/{{book.bookImage}}" alt="Card image cap">
-      <div class="card-body text-center" style="padding:0.5em;height:7em; width:100%;">
+      <div class="card-body text-center" style="padding:0.5em; width:100%;">
         <h5 class="card-title">{{book.name | slice:0:20}}</h5>
-        <p class="card-text">Tác giả: <b>{{book.author | slice:0:20}}</b></p>
-        <p class="card-text"><b>{{book.price}} VNĐ</b></p>
+        <p class="card-text" style="margin:0px;">Tác giả: <b>{{book.author | slice:0:20}}</b></p>
+        <p class="card-text" style="margin:0px;">Thể loại: <b>{{book.bookCategory}}</b></p>
+        <p class="card-text" style="margin:0px;">Giá: <b>{{book.price}} VNĐ</b></p>
       </div>
       <a class="btn btn-primary" routerLink="/info-book/{{book._id}}">Xem thêm</a>
     </div>
