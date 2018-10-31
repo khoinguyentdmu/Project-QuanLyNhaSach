@@ -36,10 +36,10 @@ var router = express.Router();
 var book_controller = require('../controllers/book.controller');
 
 //router.post('', image.single('bookImage'), book_controller.book_create);
-router.post('', book_controller.book_create);
+router.post('', checkAuth, book_controller.book_create);
 router.get('/:id', book_controller.book_details);
 router.get('', book_controller.books_details);
-router.put('/:id', book_controller.book_update);
-router.delete('/:id', book_controller.book_delete);
+router.put('/:id', checkAuth, book_controller.book_update);
+router.delete('/:id', checkAuth, book_controller.book_delete);
 
 module.exports = router;
